@@ -1,11 +1,8 @@
-import { ThemeProvider } from "styled-components";
-import { GlobalStyle } from "./styles";
+'use client'
 
-const theme = {
-    colors: {
-        primary: '#d5e0a4',
-    }
-}
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "../../app/styles";
+import { theme } from "@/app/theme";
 
 export default function Provider({
     children,

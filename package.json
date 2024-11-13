@@ -9,6 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@jsonforms/core": "^3.4.1",
+    "@jsonforms/material-renderers": "^3.4.1",
+    "@jsonforms/react": "^3.4.1",
+    "@jsonforms/vanilla-renderers": "^3.4.1",
     "next": "15.0.3",
     "next-intl": "^3.25.0",
     "polished": "^4.3.1",

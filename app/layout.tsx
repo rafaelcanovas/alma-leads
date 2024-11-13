@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Montserrat } from 'next/font/google';
-import StyledComponentsRegistry from "@/lib/registry";
+
+import ThemeProvider from "@/lib/providers/theme";
+import StyledComponentsProvider from "../lib/providers/styled-components";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -24,11 +26,13 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={montserrat.className}>
-        <StyledComponentsRegistry>
+        <StyledComponentsProvider>
           <NextIntlClientProvider messages={messages}>
-            {children}
+            <ThemeProvider>
+              {children}
+            </ThemeProvider>
           </NextIntlClientProvider>
-        </StyledComponentsRegistry>
+        </StyledComponentsProvider>
       </body>
     </html >
   );
